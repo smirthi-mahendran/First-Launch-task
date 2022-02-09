@@ -16,222 +16,223 @@
   <!-- Bootstrap 5 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+  
+<!--Internal Stylesheets for the homepage    -->
 <style>
   .nav-link{
-           color:black;
-           font-weight:bold;
-           font-size:18px;
+      color:black;
+      font-weight:bold;
+      font-size:18px;
 
        }
     html, body {
+      width: 100%;
+      height: 80%;
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica", sans-serif;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .slider{
+    height: 100%;
     width: 100%;
-    height: 80%;
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica", sans-serif;
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
   }
 
-img {
-  max-width: 100%;
-}
-
-.slider{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden; 
-  text-align: center;
-}
-
-.menu {
-  position: absolute;
-  left: 0;
-  z-index: 900;
-  width: 100%;
-  bottom: 0;
-}
-
-.menu label {
-  cursor: pointer;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: #fff;
-  border-radius: 50px;
-  margin: 0 .2em 1em;
-  &:hover {
-    background: red;
+  .menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
   }
-}
 
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  z-index: 10;
-  padding: 8em 1em 0;
-  background-size: cover;
-  background-position: 50% 50%;
-  transition: left 0s .75s;
-}
-
-[id^="slide"]:checked + .slide {
-  left: 0;
-  z-index: 100;
-  transition: left .65s ease-out;
-}
-
-.slider1 {
-    background-image: url("images/cake1.jpg");
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 .2em 1em;
+    &:hover {
+      background: red;
+    }
   }
-  .slider2 {
-    background-image: url("images/cake5.jpg");
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s .75s;
   }
-  .slider3 {
-    background-image: url("images/bake6.jpg");
+
+  [id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
   }
-  .slider4 {
-    background-image: url("images/cake4.jpg");
+
+  .slider1 {
+      background-image: url("images/cake1.jpg");
+    }
+    .slider2 {
+      background-image: url("images/cake5.jpg");
+    }
+    .slider3 {
+      background-image: url("images/bake6.jpg");
+    }
+    .slider4 {
+      background-image: url("images/cake4.jpg");
+    }
+    .text1 {
+    position: absolute;
+    top: 240px;
+    left: 50px;
+    background-color: transparent;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 5px double white;
   }
-  .text1 {
-  position: absolute;
-  top: 240px;
-  left: 50px;
-  background-color: transparent;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 5px double white;
-}
-.text2 {
-  position: absolute;
-  top: 150px;
-  left: 1100px;
-  background-color: transparent;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-style:5px solid white;
-}
-.text3 {
-  position: absolute;
-  top: 200px;
-  left: 100px;
-  background-color: transparent;
-  color: black;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.text4 {
-  position: absolute;
-  top: 120px;
-  left: 1165px;
-  background-color: transparent;
-  color: black;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  .text2 {
+    position: absolute;
+    top: 150px;
+    left: 1100px;
+    background-color: transparent;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style:5px solid white;
+  }
+  .text3 {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    background-color: transparent;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .text4 {
+    position: absolute;
+    top: 120px;
+    left: 1165px;
+    background-color: transparent;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.menucard{
-  position: absolute;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top:-900px;
-  margin-left:600px;
+  .menucard{
+    position: absolute;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top:-900px;
+    margin-left:600px;
 
-}
-.button{
-  border:none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  background-color: brown;
-}
+  }
+  .button{
+    border:none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: brown;
+  }
 
-.btn{
-  border:none;
-  position:absolute;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  top:50%;
-  bottom:50%;
-  background-color:white;
-}
+  .btn{
+    border:none;
+    position:absolute;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top:50%;
+    bottom:50%;
+    background-color:white;
+  }
 
-.button:hover {background-color: pink}
+  .button:hover {background-color: pink}
 
-.category {
-  float: left;
-  padding: 15px;
-}
+  .category {
+    float: left;
+    padding: 15px;
+  }
 
-/* Clearfix (clear floats) */
-.products::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+  /* Clearfix (clear floats) */
+  .products::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 
-.footer
-{
-  background-color:#333;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
-}
+  .footer
+  {
+    background-color:#333;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
 
-.footer h6
-{
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
-}
-.footer a
-{
-  color:#737373;
-}
-.footer a:hover
-{
-  color:#e0e27c;
-  text-decoration:none;
-}
+  .footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .footer a
+  {
+    color:#737373;
+  }
+  .footer a:hover
+  {
+    color:#e0e27c;
+    text-decoration:none;
+  }
 
-.social-icons{
-  margin-left:750px;
-}
+  .social-icons{
+    margin-left:750px;
+  }
 
-.circle {
-  width: 200px;
-  height: 200px;
-  line-height:50px;
-  border-radius: 50%;
-  font-size: 28px;
-  color: #fff;
-  text-align: center;
-  background: brown;
-}
+  .circle {
+    width: 200px;
+    height: 200px;
+    line-height:50px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    background: brown;
+  }
 </style>
 </head>
 <body>
-  <!-- Bootstrap navbar -->
+  <!-- Bootstrap 5 navbar -->
 
   <nav class="navbar navbar-transparent navbar-expand-sm bg-transparent fixed-top">
     <div class="container">
@@ -294,7 +295,7 @@ img {
       <label for="slide-dot3"></label>
       <label for="slide-dot4"></label>
     </div>
-    
+    <!-- Slider1   -->
     <input id="slide-dot1" type="radio" name="slides" checked>
       <div class="slide slider1">
         <div class="text1">
@@ -303,7 +304,7 @@ img {
           <button class="button"> Shop now </button>
         </div>
       </div>
-    
+  <!--   Slider2   -->
     <input id="slide-dot2" type="radio" name="slides">
       <div class="slide slider2">
         <div class="text2">
@@ -312,7 +313,7 @@ img {
           <button class="button"> Shop now </button>
         </div>
       </div>
-    
+  <!--  Slider3    -->
     <input id="slide-dot3" type="radio" name="slides">
       <div class="slide slider3">
         <div class="text3">
@@ -322,7 +323,7 @@ img {
           <button class="button"> Shop now </button>
         </div>
       </div>
-
+  <!--   Slider4   -->
     <input id="slide-dot4" type="radio" name="slides">
       <div class="slide slider4">
         <div class="text4">
@@ -333,8 +334,11 @@ img {
         </div>
       </div>
   </div>
+  
+  <!--  Products sections  -->
     <div class="category" >
       <div class="products" style="background-color: rgb(255, 255, 255)">
+<!--   Inline styles       -->
     <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:34px;font-weight: italics;text-align: center;text-decoration: double;color:brown;">  Our Products</h2>
     <div class="category">
       <a href="#"><img src="images/cake6.jpg" alt="Snow" style="width:250px;height:250px;"></a>
@@ -352,10 +356,9 @@ img {
       <a href="#"><img src="images/macrons.jpg" alt="Mountains" style="width:250px;height:250px;"></a>
     </div>
   </div>
-  <!-- <video width="320" height="240" autoplay>
-    <source src="images/intro.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video> -->
+<!--   Products section ends   -->
+      
+<!-- Offers and Valentines offer section  -->
   <div class="offer" style="background-image:url('');">
     <div class="circle">
       <p>
@@ -371,6 +374,8 @@ img {
   <br>
   <br>
   <br>
+      
+<!--    Menu card    -->
   <div class="" style="margin-top:42px;background-image: url('images/bg2.jpg');">
     <img src="images/bg1.jpg" width="50%" height="50%" style="margin-left:350px;">  
     <div class="menucard">
@@ -388,7 +393,9 @@ img {
       </p>
     </div>
   </div>
-    <!-- Site footer -->
+<!--  Offer section ends -->
+      
+    <!--  footer -->
     <footer class="footer">
       <div class="container">
         <div class="foot-left" style="margin-left:200px;height:150px;">
@@ -408,6 +415,7 @@ img {
         Copyright Ⓒ Panda Bakes 2022
       </p>
 </footer>
+<!--  Footer ends  -->
 </body>
 </html>
 

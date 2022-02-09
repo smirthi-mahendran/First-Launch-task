@@ -1,5 +1,8 @@
 # First-Launch-task
-Home page for an baking website called Panda Bakes using HTML,CSS and Bootstrap
+Home page for an baking website called Panda Bakes using HTML,CSS and Bootstrap 5
+For styles i have used Inline and Internal stylesheets.
+Concepts like images,slider for images,header,footer sections, and other concepts were used.
+Logo i have designed using Canva.
 
 ![image](https://user-images.githubusercontent.com/72811515/153220845-7e858666-8ee1-43ba-a3f1-3315a16c8a09.png)
 
